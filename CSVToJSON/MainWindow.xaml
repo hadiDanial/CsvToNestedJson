@@ -5,13 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSVToJSON"
         mc:Ignorable="d"
-        Title="MainWindow" Height="650" Width="925" MinWidth="925">
+        Title="CSV to JSON - ProConnect" Height="800" Width="925" MinWidth="950">
     <Grid>
-        <Button Name="OpenFileButton" Click="OpenFileButton_OnClick" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20">Open File</Button>
+        <Label HorizontalAlignment="Center" Margin="20"> CSV to nested JSON - made by Hadi for ProConnect </Label>
+        <Button Name="OpenFileButton" Click="OpenFileButton_OnClick" Width="100" Height="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="60">Open File</Button>
 
         <!-- Text Boxes -->
-        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,80,0,0">
-            <TextBox Name="CsvTextBox"  Width="900" Height="250" IsReadOnly="True" VerticalScrollBarVisibility="Auto" />
-            <TextBox Name="JSONTextBox" Width="900" Height="250" IsReadOnly="True" VerticalScrollBarVisibility="Auto" />
+        <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,110,0,0">
+            <TextBox Name="CsvTextBox"  Width="900" Height="100" IsReadOnly="True" VerticalScrollBarVisibility="Auto" />
+            <TextBox Name="JsonTextBox" Width="900" Height="500" IsReadOnly="True" VerticalScrollBarVisibility="Auto" />
         </StackPanel>    </Grid>
 </Window>

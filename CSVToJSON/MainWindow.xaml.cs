@@ -22,17 +22,17 @@ namespace CSVToJSON
                 Filter = "CSV Files (*.csv)|*.csv"
             };
             if(openFileDialog.ShowDialog() == true)
-                ReadCSV(openFileDialog.FileName);
+                ReadCsv(openFileDialog.FileName);
         }
 
-        private void ReadCSV(string fileName)
+        private void ReadCsv(string fileName)
         {
             try
             {
                 string csvInput = File.ReadAllText(fileName);
                 CsvTextBox.Text += csvInput;
                 CsvData data = CsvReader.ParseCsvWithHeader(csvInput);
-                JSONTextBox.Text = data.ToJson();
+                JsonTextBox.Text = data.ToJson();
             }
             catch (Exception e)
             {
